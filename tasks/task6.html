@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-6</title>
+</head>
+<body>
+    <h1>З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.</h1>
+
+    <script>
+        //1.Вводимо даннi
+        let priceOne = parseFloat(prompt('Введiть вартість товару 1.'));
+        let quantityOne = parseFloat(prompt('Введiть кількість товару 1.'));
+
+        let priceTwo = parseFloat(prompt('Введiть вартість товару 2.'));
+        let quantityTwo = parseFloat(prompt('Введiть кількість товару 2.'));
+
+        let priceThree = parseFloat(prompt('Введiть вартість товару 3.'));
+        let quantityThree = parseFloat(prompt('Введiть кількість товару 3.'));
+
+        //2.Знаходимо результат
+        let sumPriceOne = priceOne * quantityOne;//вартість кожного товару
+        let sumPriceTwo = priceTwo * quantityTwo;//вартість кожного товару
+        let sumPriceThree = priceThree * quantityThree;//вартість кожного товару
+
+        let totalPrice = sumPriceOne + sumPriceTwo + sumPriceThree;//загальну вартість
+
+        //3.Виводимо результат
+        document.write(`
+            <tr>
+                <th>unit-1<th/>
+                <th>...........<th/>
+                <td>${sumPriceOne} грн<td/>
+            <tr/>
+            <br>
+            <tr>
+                <th>unit-2<th/>
+                <th>...........<th/>
+                <td>${sumPriceTwo} грн<td/>
+            <tr/>
+            <br>
+            <tr>
+                <th>unit-3<th/>
+                <th>...........<th/>
+                <td>${sumPriceThree} грн<td/>
+            <tr/>
+            <br>
+            <tr>
+                <th>Total price<th/>
+                <th>...<th/>
+                <td>${totalPrice} грн<td/>
+            <tr/>
+            <h2/>
+        `)
+
+    </script>
+</body>
+</html>

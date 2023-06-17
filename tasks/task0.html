@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>task-0</title>
+</head>
+<body>
+    <h1>Обчислити значення виразів</h1>
+    <p>S1=a+12+b</p>
+    <p>S2=√( ((a+b)/2a) )</p>
+    <p>S3=∛((a+b)c)</p>
+    <p>S4=sin⁡(a/(-b))</p>
+
+    <script>
+        //1.Вводимо даннi
+        let a = parseInt(prompt('Введите значение a'));
+        let b = parseInt(prompt('Введите значение b'));
+        let c = parseInt(prompt('Введите значение c'));
+        //2.Знаходимо результат
+        let s1 = a + 12 + b;
+        let s2 = Math.sqrt( ((a + b) / 2 * a) );
+        let s3 = Math.cbrt( (a + b) * c );
+        let s4 = Math.sin( a / (-b) );
+        //3.Виводимо результат
+        document.write(`
+        a+12+b = ${s1} <br>
+        √( ((a+b)/2a) ) = ${s2} <br>
+        ∛((a+b)c) = ${s3} <br>
+        sin⁡(a/(-b)) = ${s4}
+        `);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-2</title>
+</head>
+<body>
+    <h1>Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість років.</h1>
+
+    <script>
+        //1.Вводимо даннi
+        let nowDate = 2023;
+        let yourBirth = prompt('Введiть ваш рiк народження');
+        //let now = new Date(); //Поточна дата
+        //let today = new Date(now.getFullYear(), now.getMonth(), now.getDate()); //Поточна дата
+        //let yourBirth = new Date(1984, 9, 22); //Дата народженя
+        //let yourBirthNow = new Date(today.getFullYear(), yourBirth.getMonth(), yourBirth.getDate()); //ДР поточне
+        //let age; //Возраст
+
+        //2.Знаходимо результат
+        let yourAge = nowDate - yourBirth;
+        //Возраст = поточний рiк - рiк народженя
+        //age = today.getFullYear() - yourBirth.getFullYear();
+        //Якщо ДР в цьому роцi, то вiднiмаем один age
+        //if (today < yourBirthNow) {
+        //age = age-1;
+        //}
+
+        //3.Виводимо результат
+        document.write (`<h2> Вам: ${yourAge} рокiв <h2/>`);
+    </script>
+</body>
+</html>
