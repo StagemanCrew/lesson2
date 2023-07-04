@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>task-16</title>
+</head>
+<body>
+    <h1>Скласти програму для розв’язування задачі: йде N-а секунда доби, визначити скільки повних годин і повних хвилин пройшло до цього моменту.</h1>
+
+    <script>
+        //1.Вводимо даннi
+        let seconds = parseInt(prompt('Введіть кількість секунд.'))
+
+        //2.Знаходимо результат
+        const secondOnMinute = Math.floor(seconds / 60);
+        const secondOnHour = Math.floor(seconds / 3600);
+
+        //3.Виводимо результат
+        document.write(`<h2> ${seconds} секунд = це ${secondOnHour} повних год. <br> або ${secondOnMinute} повних хв. </h2>`);
+
+    </script>
+
+</body>
+</html>

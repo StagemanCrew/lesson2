@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>task-18</title>
+</head>
+<body>
+    <h1>Дано поточну кількість годин, хвилин, секунд (як на годиннику). Визначити: <br>
+        1) яка кількість секунд буде на годиннику через N секунд. <br>
+        2) яка кількість хвилин буде на годиннику через N секунд, X хвилин.</h1>
+
+    <script>
+        // 1. Вводимо дані
+        let userHours = parseInt(prompt('Введіть поточну кількість годин.'));
+        let userMinutes = parseInt(prompt('Введіть поточну кількість хвилин.'));
+        let userSeconds = parseInt(prompt('Введіть поточну кількість секунд.'));
+
+    
+        // 2. Знаходимо результат
+        const secondOnMinute = userMinutes * 60;
+        const secondOnHour = userHours * 3600;
+        let totalSeconds = secondOnHour + secondOnMinute + userSeconds;
+    
+        const secondOnMinuteAfter = Math.floor(totalSeconds / 60);
+        const secondOnHourAfter = Math.floor(totalSeconds / 3600);
+        let secondAfter = secondOnHourAfter + secondOnMinuteAfter;
+    
+        let newSec = parseInt(prompt('Введіть кількість секунд, які ви хочете додати.'));
+        // 1) Визначаємо нове значення часу через newSec секунд
+        let secondsAfterTime = totalSeconds + newSec;
+        let hoursAfterTime = Math.floor(secondsAfterTime / 3600) % 24;
+        let minutesAfterTime = Math.floor((secondsAfterTime % 3600) / 60);
+        let secondsFinal = secondsAfterTime % 60;
+    
+        // 3. Виводимо результат
+        document.write(`<h2>
+            Поточний час: ${userHours}:${userMinutes}:${userSeconds}<br>
+            1) Через ${newSec} секунд, на годиннику буде: ${secondsFinal}сек.<br>
+            2) Через ${newSec} секунд, на годиннику буде: ${minutesAfterTime}хв. та ${secondsFinal}сек.
+        </h2>`);
+    </script>
+    
+
+</body>
+</html>

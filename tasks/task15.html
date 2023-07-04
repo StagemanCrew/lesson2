@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Gabriela:regular" rel="stylesheet" />
+    <title>task-15</title>
+</head>
+
+<body>
+    <h1>Розробити програму (не використовувати if), яка за номером року Y визначає номер століття C (врахувати, що початком XX століття був 1901, а не 1900 рік).</h1>
+
+    <script>
+        // Вводимо дані
+        let userYear = parseInt(prompt('Введіть рік.'));
+
+        // Знаходимо результат
+        let calculateCentury = (Math.floor((userYear - 1) / 100) + 1);
+
+        // Виводимо результат
+        document.write(` <h2> ${userYear}year - ${calculateCentury}century <h2/> `);
+
+    </script>
+</body>
+</html>

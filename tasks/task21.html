@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>task-21</title>
+</head>
+<body>
+    <h1>З клавіатури вводиться номер дня тижня (від 1 до 7). Визначити який буде день тижня через N днів.</h1>
+
+    <script>
+        function getFutureDayOfWeek(startDay, numberOfDays) {
+            // Перевірка на правильність введення номеру дня тижня
+            if (startDay < 1 || startDay > 7) {
+                return "Номер дня тижня повинен бути від 1 до 7";
+            }
+
+            // Масив з назвами днів тижня
+            const daysOfWeek = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"];
+
+            // Визначення номера майбутнього дня тижня
+            const futureDayIndex = (startDay + numberOfDays) % 7;
+        
+            // Повернення назви майбутнього дня тижня
+            return daysOfWeek[futureDayIndex];
+            }
+
+            // Приклад використання функції
+            const startDayOfWeek = parseInt(prompt("Введіть номер початкового дня тижня (від 1 до 7):"));
+            const numberOfDays = parseInt(prompt("Введіть кількість днів:"));
+
+            const futureDayOfWeek = getFutureDayOfWeek(startDayOfWeek, numberOfDays);
+            document.write(`<h2> Майбутній день тижня: ${futureDayOfWeek}. <h2/>`);
+    </script>
+
+</body>
+</html>

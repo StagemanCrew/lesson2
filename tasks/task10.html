@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-10</title>
+</head>
+<body>
+    <h1>З клавіатури вводяться вартість одиниці та кількість одиниць двох товарів. Вивести на екран вартість кожного з видів товарів окремо і загальну вартість.</h1>
+
+    <script>
+        //1.Вводимо даннi
+        let firstUnitPrice = parseFloat(prompt('Введите цену первого товара.'));
+        let firstQuantityUnits = parseFloat(prompt('Введите количество первого товара.'));
+        let secondUnitPrice = parseFloat(prompt('Введите цену второго товара.'));
+        let secondQuantityUnits = parseFloat(prompt('Введите количество второго товара.'));
+
+        //2.Знаходимо результат
+        let totalFirstPrice = firstUnitPrice * firstQuantityUnits;
+        let totalSecondPrice = secondUnitPrice * secondQuantityUnits;
+        let totalPrice = totalFirstPrice + totalSecondPrice;
+
+        //3.Виводимо результат
+        document.write(`<h2>
+            Стоимость первого товара: ${totalFirstPrice}грн.<br>
+            Стоимость второго товара: ${totalSecondPrice}грн.<br>
+            Общая стоимость товаров: ${totalPrice}грн.
+            </h2>`)
+
+    </script>
+</body>
+</html>

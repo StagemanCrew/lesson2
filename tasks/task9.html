@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-9</title>
+</head>
+<body>
+    <h1>З клавіатури вводиться розмір заробітної плати та розмір прожиткового мінімуму. Визначити розмір соціальної допомоги (ввжаємо, що заробітна плата є меншою).</h1>
+
+    <script>
+        //1. Вводимо даннi
+        let payPerMonth = parseFloat(prompt('Введите вашу зарплату.'));
+        let minPay = parseFloat(prompt('Введите прожиточный минимум.'));
+
+        //2. Знаходимо результат
+        let helpPay = minPay - payPerMonth;
+
+        //3. Виводимо результат
+        document.write(`<h2> Ваша социальная помощь составляет: ${helpPay}грн. </h2>`);
+
+    </script>
+</body>
+</html>

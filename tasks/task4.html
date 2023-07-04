@@ -10,15 +10,15 @@
 
     <script>
         // 1. Вводимо дані
-        let yourLength = prompt('Введіть довжину');
+        let yourLength = parseFloat(prompt('Введіть довжину у См'));
     
         // 2. Знаходимо результат
-        let lengthCm = parseFloat(yourLength); // Перетворюємо введене значення на число
+        let lengthCm = yourLength; // Перетворюємо введене значення на число
         let lengthMeter = lengthCm / 100;
         let lengthKm = lengthCm / 100000;
     
         // 3. Виводимо результат
-        document.write(`<h2> ${yourLength} см = ${lengthMeter} м = ${lengthKm} км <h2/>`);
+        document.write(`<h2> ${yourLength} см = ${lengthMeter} м = ${lengthKm} км </h2>`);
     </script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>task-22</title>
+</head>
+<body>
+    <h1>З клавіатури вводиться кількість місяців, які пройшли від деякого моменту часу. Вивести повну кількість років і місяців. Наприклад, дано 28 місяців, а вивести 2 роки і 4 місяці.</h1>
+
+    <script>
+        //1.Вводимо даннi
+        let userMonths = parseInt(prompt('Введіть кількість місяців.'))
+
+        //2.Знаходимо результат
+        let fullYears = Math.floor(userMonths / 12)
+
+        //3.Виводимо результат
+        document.write(` <h2>
+            In ${userMonths} months - ${fullYears}years, and ${userMonths - (fullYears * 12)}months
+        <h2/> `);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-11</title>
+</head>
+<body>
+    <h1>З клавіатури вводиться вік дитини. Вивести на екран через скільки років вона буде відвідувати садочок, піде у школу, закінчить школу, вступить і закінчить.</h1>
+
+    <script>
+        //1.Вводимо даннi
+        let childsAge = parseInt(prompt('Введите возраст ребенка.'));
+        const kindergarten = 3;
+        const schoolAge = 7;
+        const endSchoolAge = 18;
+        const universityAge = 18;
+        const endUniversityAge = 23;
+
+        //2.Знаходимо результат
+        let leftBeforKindergarten = kindergarten - childsAge;
+        let leftBeforSchool = schoolAge - childsAge;
+        let leftBeforEndSchool = endSchoolAge - childsAge;
+        let leftBeforUniversity = universityAge - childsAge;
+        let leftBeforndUniversity = endUniversityAge - childsAge;
+
+        //3.Виводимо результат
+        document.write(`<h2>
+            Ваш ребенок пойдет в садик через ${leftBeforKindergarten} лет/год/а. <br>
+            Ваш ребенок пойдет в школу через ${leftBeforSchool} лет/года. <br>
+            Ваш ребенок закончит школу через ${leftBeforEndSchool} лет/года. <br>
+            Ваш ребенок пойдет в вуз через ${leftBeforUniversity} лет/года. <br>
+            Ваш ребенок закончит вуз через ${leftBeforndUniversity} лет/года.
+            </h2>`)
+
+    </script>
+</body>
+</html>

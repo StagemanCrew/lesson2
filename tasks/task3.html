@@ -10,8 +10,8 @@
 
     <script>
         //1.Вводимо даннi
-        let unitPrice = prompt('Введiть цiну');
-        let quantityUnit = prompt('Введiть кiлькiсть');
+        let unitPrice = parseInt(prompt('Введiть цiну'));
+        let quantityUnit = parseInt(prompt('Введiть кiлькiсть'));
         const vatPercent = 5;
 
         //2.Знаходимо результат
@@ -19,7 +19,7 @@
         let vatValue = totalCost * vatPercent / 100;
 
         //3.Виводимо результат
-        document.write(`<h2> Загальна вартість = ${totalCost} грн <br> ПДВ = ${vatValue} грн <h2/>`);
+        document.write(`<h2> Загальна вартість = ${totalCost} грн <br> ПДВ = ${vatValue} грн </h2>`);
 
     </script>
 </body>

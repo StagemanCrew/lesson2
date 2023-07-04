@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>task-23</title>
+</head>
+<body>
+    <h1>З клавіатури вводиться номер місяця. Визначити, який буде місяць через вказану кількість N місяців.</h1>
+
+    <script>
+        function getFutureMonth(startMonth, numberOfMonths) {
+            // Перевірка на правильність введення номеру місяця
+            if (startMonth < 1 || startMonth > 12) {
+                return "Номер місяця повинен бути від 1 до 12";
+        }
+
+        // Масив з назвами місяців
+        const nameOfMonth = ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"];
+
+        // Визначення номера майбутнього місяця
+        const futureMonthIndex = (startMonth - 1 + numberOfMonths) % 12;
+
+        // Повернення назви майбутнього місяця
+        return nameOfMonth[futureMonthIndex];
+        }
+        // Приклад використання функції
+        const startMonth = parseInt(prompt("Введіть номер початкового місяця (від 1 до 12):"));
+        const numberOfMonths = parseInt(prompt("Введіть кількість місяців:"));
+        const futureMonth = getFutureMonth(startMonth, numberOfMonths);
+        document.write(`<h2>Майбутній місяць: ${futureMonth}</h2>`);
+    </script>
+
+</body>
+</html>

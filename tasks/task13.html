@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-13</title>
+</head>
+<body>
+    <h1>Дано три дійсні змінні a, b і c.  Скласти  алгоритм, який міняє місцями значення цих змінних наступним чином: змінна a набуває значення змінної b, змінна b набуває значення змінної c, а змінна  c – попереднє значення змінної a</h1>
+
+    <script>
+        document.write(`<div style="display: inline-flex; border: 1px solid red; padding: 10px; margin-right: 20px;">`);
+            // 1. Вводимо дані
+            let a = 1;
+            let b = 2;
+            let c = 3;
+
+            // 2. Виведення початкових значень
+            document.write(`<h2> Початкові значення: <br>
+            a = ${a} <br>
+            b = ${b} <br>
+            c = ${c}
+            </h2>`);
+        document.write(`</div>`);
+
+        document.write(`<div style="display: inline-flex; border: 1px solid red; padding: 10px;">`);
+            // 3. Міняємо значення змінних
+            let temp = a; // Зберігаємо значення змінної a в тимчасову змінну temp
+            a = b;
+            b = c;
+            c = temp;
+
+            // 4. Виводимо результат
+            //document.write("Нові значення:");
+            //document.write("a =", a);
+            //document.write("b =", b);
+            //document.write("c =", c);
+            document.write(`<h2> Нові значення: <br>
+            a = ${a} <br>
+            b = ${b} <br>
+            c = ${c}
+            </h2>`);
+        document.write(`</div>`);
+    </script>
+</body>
+</html>

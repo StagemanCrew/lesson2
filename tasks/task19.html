@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>task-19</title>
+</head>
+<body>
+    <h1>З клавіатури вводиться кількість монет номіналом 2 копійки (5коп, 25коп, 50 коп). Визначити скільки гривень і копійок є у даній сумі.</h1>
+
+    <script>
+        //1.Вводимо даннi
+        let user2Cent = parseInt(prompt('Введіть кількість копійок номіналом 2 копійки.'))
+        let user5Cent = parseInt(prompt('Введіть кількість копійок номіналом 5 копійки.'))
+        let user25Cent = parseInt(prompt('Введіть кількість копійок номіналом 25 копійки.'))
+        let user50Cent = parseInt(prompt('Введіть кількість копійок номіналом 50 копійки.'))
+
+        //2.Знаходимо результат
+        let sumCent = (user50Cent * 50) + (user25Cent * 25) + (user5Cent * 5) + (user2Cent * 2);
+        let userDollar = Math.floor(sumCent / 100)
+
+        //3.Виводимо результат
+        document.write(` <h2>
+            ${sumCent}cent = ${userDollar}$, ${sumCent - (userDollar * 100)}cent
+        <h2/> `);
+
+    </script>
+
+</body>
+</html>

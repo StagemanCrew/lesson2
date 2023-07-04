@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-14</title>
+</head>
+<body>
+    <h1>Скласти алгоритм, який обчислює цілу і дробову частину даного числа X. Наприклад: число 23,56  => ціла: 23, дробова: 0,56.</h1>
+
+    <script>
+        //1.Вводимо даннi
+        let usereNumber = parseFloat(prompt('Введите дробное число.'));
+
+        //2.Знаходимо результат
+        let wholeNumber = usereNumber.toFixed();
+        let fractionalNumber = (usereNumber - wholeNumber).toFixed(2);
+        //fractionalNumber.toFixed(2);
+        //3.Виводимо результат
+        document.write(` <h2>
+            Ваше число: ${usereNumber} <br>
+            Целое число: ${wholeNumber} <br>
+            Дробное число: ${fractionalNumber} <br>
+            </h2> `)
+
+    </script>
+</body>
+</html>

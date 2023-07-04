@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>task-20</title>
+</head>
+<body>
+    <h1>Визначити скільки повних тижнів є у вказаній кількості днів.</h1>
+
+    <script>
+        //1.Вводимо даннi
+        let userDays = parseInt(prompt('Введіть кількість днів.'))
+
+        //2.Знаходимо результат
+        let fullWeeks = Math.floor(userDays / 7)
+
+        //3.Виводимо результат
+        document.write(` <h2>
+            In ${userDays} days - ${fullWeeks} full weeks.
+        <h2/> `);
+
+    </script>
+
+</body>
+</html>

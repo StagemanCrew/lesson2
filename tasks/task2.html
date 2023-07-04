@@ -10,8 +10,8 @@
 
     <script>
         //1.Вводимо даннi
-        let nowDate = 2023;
-        let yourBirth = prompt('Введiть ваш рiк народження');
+        const nowDate = 2023;
+        const yourBirth = parseInt(prompt('Введiть ваш рiк народження'));
         //let now = new Date(); //Поточна дата
         //let today = new Date(now.getFullYear(), now.getMonth(), now.getDate()); //Поточна дата
         //let yourBirth = new Date(1984, 9, 22); //Дата народженя
@@ -28,7 +28,7 @@
         //}
 
         //3.Виводимо результат
-        document.write (`<h2> Вам: ${yourAge} рокiв <h2/>`);
+        document.write (`<h2> Вам: ${yourAge} рокiв </h2>`);
     </script>
 </body>
 </html>

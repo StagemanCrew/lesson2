@@ -10,15 +10,15 @@
 
     <script>
         // 1. Вводимо дані
-        let totalSec = prompt('Введіть секунди');
+        let totalSec = parseFloat(prompt('Введіть секунди'));
     
         // 2. Знаходимо результат
-        let seconds = parseFloat(totalSec); // Перетворюємо введене значення на число
+        let seconds = totalSec; // Перетворюємо введене значення на число
         let secondOnMin = (seconds / 60).toFixed(2);
         let secondOnHours = (seconds / 3600).toFixed(2);
     
         // 3. Виводимо результат
-        document.write(`<h2> ${totalSec} секунд = ${secondOnMin} мiнут = ${secondOnHours} годин <h2/>`);
+        document.write(`<h2> ${totalSec} секунд = ${secondOnMin} мiнут = ${secondOnHours} годин </h2>`);
     </script>
 </body>
 </html>

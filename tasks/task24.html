@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>task-24</title>
+</head>
+<body>
+    <h1>Зашифрувати один введений англійський символ у верхньому регістрі (один з символів: A,B,…Z)  методом зміщення (шифр Цезаря).</h1>
+
+    <script>
+        function caesarCipher(character, shift) {
+            const uppercaseAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const characterIndex = uppercaseAlphabet.indexOf(character);
+            const shiftedIndex = (characterIndex + shift) % 26;
+            const encryptedCharacter = uppercaseAlphabet.charAt(shiftedIndex);
+            return encryptedCharacter;
+        }
+
+        // Приклад використання функції
+        const inputCharacter = prompt("Введіть символ для шифрування (A-Z):");
+        const shiftAmount = parseInt(prompt("Введіть зміщення (ціле число):"));
+        const encryptedCharacter = caesarCipher(inputCharacter, shiftAmount);
+        document.write(`<h2>Зашифрований символ: ${encryptedCharacter}</h2>`);
+    </script>
+
+</body>
+</html>
